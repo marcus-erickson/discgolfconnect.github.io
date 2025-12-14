@@ -6,6 +6,7 @@
     <meta name="description" content="Connect with disc golf players, find rounds, and discover courses in your area. Disc Golf Connect - Connecting the disc golf community, one round at a time.">
     <title>Disc Golf Connect - Connect with Disc Golf Players</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
+
     <style>
         * {
             margin: 0;
@@ -33,30 +34,15 @@
             text-align: center;
         }
 
-        .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
-            border-radius: 26px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
         h1 {
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 12px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .subtitle {
             font-size: 1.25rem;
             opacity: 0.95;
-            font-weight: 400;
         }
 
         main {
@@ -70,7 +56,6 @@
         .section-title {
             font-size: 2rem;
             font-weight: 600;
-            color: #3E3B36;
             margin-bottom: 24px;
             text-align: center;
         }
@@ -88,7 +73,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
-            margin-top: 40px;
         }
 
         .feature-card {
@@ -96,45 +80,30 @@
             border-radius: 12px;
             padding: 20px;
             border: 1px solid rgba(62, 59, 54, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         }
 
         .feature-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(143, 164, 106, 0.15);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-size: 24px;
             margin-bottom: 12px;
-            font-size: 20px;
         }
 
         .feature-title {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #3E3B36;
             margin-bottom: 8px;
         }
 
         .feature-description {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #6B6258;
-            line-height: 1.5;
         }
 
         .app-info {
             background: #EFEBE3;
             border-radius: 12px;
             padding: 32px;
-            max-width: 600px;
-            margin: 40px auto;
+            max-width: 700px;
+            margin: 0 auto;
             border: 1px solid rgba(62, 59, 54, 0.1);
         }
 
@@ -154,9 +123,58 @@
             color: #6B6258;
         }
 
-        .info-value {
+        .info-value a {
             font-weight: 600;
-            color: #3E3B36;
+            color: #8FA46A;
+            text-decoration: none;
+        }
+
+        /* Account deletion styles */
+        .deletion-card {
+            background: #EFEBE3;
+            border-radius: 12px;
+            padding: 24px;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 1px solid rgba(62, 59, 54, 0.1);
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .form-row label {
+            font-weight: 600;
+        }
+
+        .form-row input,
+        .form-row textarea {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(62, 59, 54, 0.2);
+            background: #F5F2ED;
+            font-size: 1rem;
+        }
+
+        .primary-button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #D48742 0%, #8FA46A 100%);
+            cursor: pointer;
+        }
+
+        .small-print {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: #6B6258;
         }
 
         footer {
@@ -166,138 +184,136 @@
             text-align: center;
         }
 
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            margin-top: 20px;
-        }
-
-        .footer-links a {
-            color: #8FA46A;
-            text-decoration: none;
-            margin: 0 16px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: #D48742;
-        }
-
         .footer-text {
-            margin-top: 24px;
-            color: #6B6258;
+            margin-top: 20px;
             font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .subtitle {
-                font-size: 1rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .app-icon {
-                width: 100px;
-                height: 100px;
-            }
+            color: #6B6258;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="header-content">
-            <!-- <img src="assets/icon.png" alt="Disc Golf Connect" class="app-icon"> -->
-            <h1>Disc Golf Connect</h1>
-            <p class="subtitle">Connecting the disc golf community, one round at a time</p>
-        </div>
-    </header>
+<header>
+    <h1>Disc Golf Connect</h1>
+    <p class="subtitle">Connecting the disc golf community, one round at a time</p>
+</header>
 
-    <main>
-        <div class="container">
-            <!-- About Section -->
-            <section class="section">
-                <h2 class="section-title">About the App</h2>
-                <p class="about-text">
-                    Disc Golf Connect is your go-to app for finding disc golf rounds, connecting with other players,
-                    and building a stronger disc golf community. Whether you're looking to join a casual round,
-                    organize a tournament, or help fellow players find their lost discs, we've got you covered.
-                </p>
-            </section>
+<main>
+    <div class="container">
 
-            <!-- Features Section -->
-            <section class="section">
-                <h2 class="section-title">What You Can Do</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🎯</div>
-                        <h3 class="feature-title">Find & Create Rounds</h3>
-                        <p class="feature-description">
-                            Discover nearby disc golf rounds or create your own and invite others to join
-                        </p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">👥</div>
-                        <h3 class="feature-title">Connect with Players</h3>
-                        <p class="feature-description">
-                            Meet fellow disc golfers, build your network, and never play alone again
-                        </p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">🏌️</div>
-                        <h3 class="feature-title">Practice your Skills</h3>
-                        <p class="feature-description">
-                            Hone your skills with drills for putting, approach, driving and specialty shots
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- App Info Section -->
-            <section class="section">
-                <div class="app-info">
-                    <div class="info-row">
-                        <span class="info-label">Privacy Policy</span>
-                        <span class="info-value"><a href="privacy-policy.html">Click Here</a></span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Terms and Conditions</span>
-                        <span class="info-value"><a href="termsandconditions.html">Click Here</a></span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Developer</span>
-                        <span class="info-value">Thunder God Software</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Contact Us</span>
-                        <span class="info-value"><a href="mailto:infodiscgolfconnect@gmail.com">infodiscgolfconnect@gmail.com</a></span>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>Made with ❤️ for the disc golf community</p>
-
-            <p class="footer-text">
-                © 2025 Thunder God Software. All rights reserved.
+        <section class="section">
+            <h2 class="section-title">About the App</h2>
+            <p class="about-text">
+                Disc Golf Connect helps players find rounds, meet new people, and grow the disc golf community.
             </p>
-        </div>
-    </footer>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">What You Can Do</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Find & Create Rounds</h3>
+                    <p class="feature-description">Discover or organize disc golf rounds nearby.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Connect with Players</h3>
+                    <p class="feature-description">Meet fellow disc golfers and grow your network.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏌️</div>
+                    <h3 class="feature-title">Practice Your Skills</h3>
+                    <p class="feature-description">Improve your game with drills and challenges.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="app-info">
+                <div class="info-row">
+                    <span class="info-label">Privacy Policy</span>
+                    <span class="info-value"><a href="privacy-policy.html">View</a></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Terms & Conditions</span>
+                    <span class="info-value"><a href="termsandconditions.html">View</a></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Delete My Account</span>
+                    <span class="info-value"><a href="#delete-account">Request</a></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Contact</span>
+                    <span class="info-value">
+                        <a href="mailto:infodiscgolfconnect@gmail.com">infodiscgolfconnect@gmail.com</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="delete-account">
+            <h2 class="section-title">Request Account & Data Deletion</h2>
+            <p class="about-text">
+                Submit a request below to delete your Disc Golf Connect account and associated data.
+            </p>
+
+            <div class="deletion-card">
+                <form id="deletionForm">
+                    <div class="form-row">
+                        <label for="email">Account Email</label>
+                        <input id="email" type="email" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="username">Username (optional)</label>
+                        <input id="username" type="text">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="details">Additional Details (optional)</label>
+                        <textarea id="details" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="primary-button">
+                        Send Deletion Request
+                    </button>
+
+                    <p class="small-print">
+                        Some information may be retained if required for legal or security purposes.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <p>Made with ❤️ for the disc golf community</p>
+    <p class="footer-text">© 2025 Thunder God Software. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById('deletionForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const username = document.getElementById('username').value;
+        const details = document.getElementById('details').value;
+
+        const subject = encodeURIComponent("Account & Data Deletion Request");
+        const body = encodeURIComponent(
+            `Account email: ${email}\n` +
+            (username ? `Username: ${username}\n` : '') +
+            (details ? `Details: ${details}\n` : '')
+        );
+
+        window.location.href =
+            `mailto:infodiscgolfconnect@gmail.com?subject=${subject}&body=${body}`;
+    });
+</script>
+
 </body>
 </html>
-
 
